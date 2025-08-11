@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1b1b1f;
+  --ivory: #f8f6f2;
+  --champagne: #d7c7a9;
+}
+
+html, body {
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 border px-5 py-3 rounded-md hover:bg-ink hover:text-ivory transition;
+}
