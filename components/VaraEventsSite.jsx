@@ -20,6 +20,7 @@ export default function VaraEventsSite() {
             <a href="#services" className="hover:text-gray-600">Services</a>
             <a href="#process" className="hover:text-gray-600">Process</a>
             <a href="#contact" className="hover:text-gray-600">Contact</a>
+            <a href="/gallery" className="hover:text-gray-600">Gallery</a>
           </div>
           <a href="#contact" className="inline-flex items-center border px-3 py-2 rounded hover:bg-gray-900 hover:text-white transition text-sm">
             Book a consult
