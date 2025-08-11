@@ -27,19 +27,31 @@ export default function VaraEventsSite() {
         </nav>
       </header>
 
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-28 md:py-40">
-        <h1 className="text-4xl md:text-6xl font-serif tracking-tight">
+      {/* HERO with background image */}
+      <section className="relative max-w-6xl mx-auto px-6 py-28 md:py-40">
+        {/* Background image layer */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-center bg-cover"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1521337581284-029599e1d3f4?q=80&w=2000&auto=format&fit=crop')",
+            filter: "brightness(0.8)"
+          }}
+        />
+        {/* Optional white overlay */}
+        <div className="absolute inset-0 -z-10 bg-white/30" />
+
+        <h1 className="text-4xl md:text-6xl font-serif tracking-tight text-white drop-shadow-md">
           Luxury experiences, authentically delivered.
         </h1>
-        <p className="mt-6 text-lg text-gray-700 max-w-2xl">
+        <p className="mt-6 text-lg text-white max-w-2xl drop-shadow-sm">
           Holistic planning, organic aesthetics, white-glove execution—for brands and private affairs.
         </p>
         <div className="mt-8 flex gap-3">
-          <a href="#contact" className="inline-flex items-center border px-5 py-3 rounded-md hover:bg-gray-900 hover:text-white transition">
+          <a href="#contact" className="inline-flex items-center border border-white text-white px-5 py-3 rounded-md hover:bg-white hover:text-gray-900 transition">
             Start a project
           </a>
-          <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md hover:underline">
+          <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md text-white hover:underline">
             Explore services
           </a>
         </div>
@@ -107,16 +119,15 @@ export default function VaraEventsSite() {
         </div>
       </Section>
 
-<footer className="border-t">
-  <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
-    <div>© {new Date().getFullYear()} Vara Events</div>
-    <div>Holistic brand experiences & organic events.</div>
-    <p className="text-xs text-gray-500">
-      Placeholder photos via Unsplash — replaced with client work upon request.
-    </p>
-  </div>
-</footer>
-
-</div>
-);
+      <footer className="border-t">
+        <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
+          <div>© {new Date().getFullYear()} Vara Events</div>
+          <div>Holistic brand experiences & organic events.</div>
+          <p className="text-xs text-gray-500">
+            Placeholder photos via Unsplash — replaced with client work upon request.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
 }
