@@ -1,32 +1,41 @@
+/* --- Tailwind core (must be first) --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Typography: chic, polished, demure --- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap');
 
-:root {
-  --ink: #1a1a1a;
-  --warm-gray: #5f5f5f;
-  --ivory: #fdfcf9;
-  --accent: #d4b483; /* muted champagne */
+:root{
+  --ink:#1a1a1a;
+  --warm-gray:#5f5f5f;
+  --ivory:#fdfcf9;
+  --accent:#d4b483; /* muted champagne */
 }
 
-body {
-  font-family: 'Work Sans', system-ui, sans-serif;
-  background-color: var(--ivory);
+html, body {
+  background: var(--ivory);
   color: var(--ink);
+}
+
+body{
+  font-family: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6;
 }
 
-.font-serif {
+/* Headings = soft luxury serif */
+.font-serif,
+h1,h2,h3,h4{
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 500;
-  letter-spacing: 0.2px;
-}
-
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 500;
+  letter-spacing: .2px;
   color: var(--ink);
 }
 
-p {
-  color: var(--warm-gray);
-}
+/* Body tone */
+p{ color: var(--warm-gray); }
+
+/* Buttons/links */
+a, button{ letter-spacing:.3px; }
+a:hover, button:hover{ opacity:.85; transition: opacity .25s ease-in-out; }
