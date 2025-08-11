@@ -2,64 +2,55 @@ import React from "react";
 
 const Section = ({ id, title, children }) => (
   <section id={id} className="max-w-6xl mx-auto px-6 py-20">
-    <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-6">{title}</h2>
-    <div className="text-lg leading-relaxed text-gray-700">{children}</div>
+    <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-6 text-white">{title}</h2>
+    <div className="text-lg leading-relaxed text-gray-300">{children}</div>
   </section>
 );
 
 export default function VaraEventsSite() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-black text-white">
       {/* NAV */}
-      <header className="sticky top-0 z-30 backdrop-blur bg-white/70 border-b">
+      <header className="sticky top-0 z-30 backdrop-blur bg-black/80 border-b border-gray-700">
         <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="font-serif text-xl">Vara <span className="font-sans">Events</span></a>
           <div className="hidden md:flex gap-6 text-sm">
-            <a href="#about" className="hover:text-gray-600">About</a>
-            <a href="#services" className="hover:text-gray-600">Services</a>
-            <a href="#process" className="hover:text-gray-600">Process</a>
-            <a href="#contact" className="hover:text-gray-600">Contact</a>
-            <a href="/gallery" className="hover:text-gray-600">Gallery</a>
+            <a href="#about" className="hover:text-gray-400">About</a>
+            <a href="#services" className="hover:text-gray-400">Services</a>
+            <a href="#process" className="hover:text-gray-400">Process</a>
+            <a href="#contact" className="hover:text-gray-400">Contact</a>
+            <a href="/gallery" className="hover:text-gray-400">Gallery</a>
           </div>
-          <a href="#contact" className="inline-flex items-center border px-3 py-2 rounded hover:bg-gray-900 hover:text-white transition text-sm">
+          <a href="#contact" className="inline-flex items-center border border-gray-500 px-3 py-2 rounded hover:bg-white hover:text-black transition text-sm">
             Book a consult
           </a>
         </nav>
       </header>
 
-      {/* HERO with background image */}
-      <section className="relative max-w-6xl mx-auto px-6 py-28 md:py-40">
-        {/* Background image layer */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-center bg-cover"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1521337581284-029599e1d3f4?q=80&w=2000&auto=format&fit=crop')",
-            filter: "brightness(0.8)"
-          }}
-        />
-        {/* Optional white overlay */}
-        <div className="absolute inset-0 -z-10 bg-white/30" />
-
-        <h1 className="text-4xl md:text-6xl font-serif tracking-tight text-white drop-shadow-md">
+      {/* HERO */}
+      <section
+        className="max-w-6xl mx-auto px-6 py-28 md:py-40 bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80')" }}
+      >
+        <h1 className="text-4xl md:text-6xl font-serif tracking-tight">
           Luxury experiences, authentically delivered.
         </h1>
-        <p className="mt-6 text-lg text-white max-w-2xl drop-shadow-sm">
+        <p className="mt-6 text-lg text-gray-300 max-w-2xl">
           Holistic planning, organic aesthetics, white-glove execution—for brands and private affairs.
         </p>
         <div className="mt-8 flex gap-3">
-          <a href="#contact" className="inline-flex items-center border border-white text-white px-5 py-3 rounded-md hover:bg-white hover:text-gray-900 transition">
+          <a href="#contact" className="inline-flex items-center border border-gray-500 px-5 py-3 rounded-md hover:bg-white hover:text-black transition">
             Start a project
           </a>
-          <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md text-white hover:underline">
+          <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md hover:underline">
             Explore services
           </a>
         </div>
       </section>
 
       {/* BADGE BAR */}
-      <div className="border-y bg-white">
-        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600">
+      <div className="border-y border-gray-700 bg-black">
+        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-400">
           <div>Zero-waste options</div>
           <div>Experiential PR</div>
           <div>Global vendor network</div>
@@ -83,9 +74,9 @@ export default function VaraEventsSite() {
             { t: "Corporate & Retreats", d: "Offsites, summits, wellness-forward retreats." },
             { t: "Private Affairs", d: "Milestones, micro-weddings, culturally-rooted ceremonies." },
           ].map((s, i) => (
-            <div key={i} className="bg-white border rounded-lg p-6">
-              <h3 className="font-serif text-xl mb-2">{s.t}</h3>
-              <p className="text-gray-700">{s.d}</p>
+            <div key={i} className="bg-black border border-gray-700 rounded-lg p-6">
+              <h3 className="font-serif text-xl mb-2 text-white">{s.t}</h3>
+              <p className="text-gray-300">{s.d}</p>
             </div>
           ))}
         </div>
@@ -93,34 +84,34 @@ export default function VaraEventsSite() {
 
       {/* PROCESS */}
       <Section id="process" title="How we work">
-        <ol className="grid md:grid-cols-4 gap-6 text-gray-800">
-          <li className="bg-white border rounded-lg p-6"><b>1 / Discover</b><br/> Objectives, audience, budget.</li>
-          <li className="bg-white border rounded-lg p-6"><b>2 / Design</b><br/> Concept boards, venues, materials.</li>
-          <li className="bg-white border rounded-lg p-6"><b>3 / Build</b><br/> Vendors, run-of-show, PR outreach.</li>
-          <li className="bg-white border rounded-lg p-6"><b>4 / Deliver</b><br/> On-site leadership & post-event wrap.</li>
+        <ol className="grid md:grid-cols-4 gap-6 text-gray-300">
+          <li className="bg-black border border-gray-700 rounded-lg p-6"><b className="text-white">1 / Discover</b><br/> Objectives, audience, budget.</li>
+          <li className="bg-black border border-gray-700 rounded-lg p-6"><b className="text-white">2 / Design</b><br/> Concept boards, venues, materials.</li>
+          <li className="bg-black border border-gray-700 rounded-lg p-6"><b className="text-white">3 / Build</b><br/> Vendors, run-of-show, PR outreach.</li>
+          <li className="bg-black border border-gray-700 rounded-lg p-6"><b className="text-white">4 / Deliver</b><br/> On-site leadership & post-event wrap.</li>
         </ol>
       </Section>
 
       {/* CONTACT */}
       <Section id="contact" title="Let’s design your event">
-        <div className="bg-white border rounded-lg p-6">
+        <div className="bg-black border border-gray-700 rounded-lg p-6">
           <form className="grid md:grid-cols-2 gap-4">
-            <input className="border rounded px-3 py-2" placeholder="Your name" />
-            <input className="border rounded px-3 py-2" placeholder="Email" type="email" />
-            <input className="md:col-span-2 border rounded px-3 py-2" placeholder="Company / Event" />
-            <textarea className="md:col-span-2 border rounded px-3 py-2" rows={5} placeholder="Date(s), location, guest count, goals, vibe" />
-            <button type="button" className="inline-flex items-center border px-5 py-3 rounded-md hover:bg-gray-900 hover:text-white transition">
+            <input className="border border-gray-700 bg-black text-white rounded px-3 py-2" placeholder="Your name" />
+            <input className="border border-gray-700 bg-black text-white rounded px-3 py-2" placeholder="Email" type="email" />
+            <input className="md:col-span-2 border border-gray-700 bg-black text-white rounded px-3 py-2" placeholder="Company / Event" />
+            <textarea className="md:col-span-2 border border-gray-700 bg-black text-white rounded px-3 py-2" rows={5} placeholder="Date(s), location, guest count, goals, vibe" />
+            <button type="button" className="inline-flex items-center border border-gray-500 px-5 py-3 rounded-md hover:bg-white hover:text-black transition">
               Send inquiry
             </button>
           </form>
-          <p className="text-sm text-gray-600 mt-4">
+          <p className="text-sm text-gray-400 mt-4">
             Prefer email? <a className="underline" href="mailto:hello@varaevents.com">hello@varaevents.com</a>
           </p>
         </div>
       </Section>
 
-      <footer className="border-t">
-        <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
+      <footer className="border-t border-gray-700">
+        <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-400 flex flex-col md:flex-row items-center justify-between gap-2">
           <div>© {new Date().getFullYear()} Vara Events</div>
           <div>Holistic brand experiences & organic events.</div>
           <p className="text-xs text-gray-500">
