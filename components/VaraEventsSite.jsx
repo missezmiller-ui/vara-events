@@ -108,14 +108,13 @@ export default function VaraEventsSite() {
         </div>
       </Section>
 
-      {/* FOOTER */}
-      <footer className="border-t">
-        <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
-          <div>© {new Date().getFullYear()} Vara Events</div>
-          <div>Holistic brand experiences & organic events.</div>
-        </div>
-      </footer>
-    </div>
-  );
-}
-
+     {/* FOOTER */}
+<footer className="border-t">
+  <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
+    <div>© {new Date().getFullYear()} Vara Events</div>
+    <div>Holistic brand experiences & organic events.</div>
+    <p className="text-xs text-gray-500">
+      Placeholder photos via Unsplash — replaced with client work upon request.
+    </p>
+  </div>
+</footer>
