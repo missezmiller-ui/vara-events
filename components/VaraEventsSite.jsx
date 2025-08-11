@@ -117,3 +117,4 @@ export default function VaraEventsSite() {
     </div>
   );
 }
+
