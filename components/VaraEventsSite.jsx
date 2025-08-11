@@ -1,4 +1,3 @@
-// components/VaraEventsSite.jsx
 import React from "react";
 
 const Section = ({ id, title, children }) => (
