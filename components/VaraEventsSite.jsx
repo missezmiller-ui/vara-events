@@ -28,26 +28,31 @@ export default function VaraEventsSite() {
       </header>
 
       {/* HERO */}
-      <section
-        className="max-w-6xl mx-auto px-6 py-28 md:py-40 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80')" }}
-      >
-        <h1 className="text-4xl md:text-6xl font-serif tracking-tight">
-          Luxury experiences, authentically delivered.
-        </h1>
-        <p className="mt-6 text-lg text-gray-300 max-w-2xl">
-          Holistic planning, organic aesthetics, white-glove execution—for brands and private affairs.
-        </p>
-        <div className="mt-8 flex gap-3">
-          <a href="#contact" className="inline-flex items-center border border-gray-500 px-5 py-3 rounded-md hover:bg-white hover:text-black transition">
-            Start a project
-          </a>
-          <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md hover:underline">
-            Explore services
-          </a>
-        </div>
-      </section>
+<section
+  className="relative max-w-6xl mx-auto px-6 py-28 md:py-40 bg-cover bg-center"
+  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80')" }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
+  {/* Text content */}
+  <div className="relative z-10">
+    <h1 className="text-4xl md:text-6xl font-serif tracking-tight text-white">
+      Luxury experiences, authentically delivered.
+    </h1>
+    <p className="mt-6 text-lg text-gray-300 max-w-2xl">
+      Holistic planning, organic aesthetics, white-glove execution—for brands and private affairs.
+    </p>
+    <div className="mt-8 flex gap-3">
+      <a href="#contact" className="inline-flex items-center border border-gray-500 px-5 py-3 rounded-md hover:bg-white hover:text-black transition">
+        Start a project
+      </a>
+      <a href="#services" className="inline-flex items-center px-5 py-3 rounded-md hover:underline text-white">
+        Explore services
+      </a>
+    </div>
+  </div>
+</section>
       {/* BADGE BAR */}
       <div className="border-y border-gray-700 bg-black">
         <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-400">
