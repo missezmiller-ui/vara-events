@@ -108,7 +108,7 @@ export default function VaraEventsSite() {
         </div>
       </Section>
 
-     {/* FOOTER */}
+{/* FOOTER */}
 <footer className="border-t">
   <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-2">
     <div>© {new Date().getFullYear()} Vara Events</div>
@@ -118,3 +118,8 @@ export default function VaraEventsSite() {
     </p>
   </div>
 </footer>
+
+</div>  {/* <-- closes the outermost page wrapper */}
+);
+}
+
